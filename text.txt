@@ -1,0 +1,20 @@
+About
+ -概要
+
+plan
+ - 長期 -- ~end
+ - 中期 -- ~30年
+ - 短期 -- ~5年
+- task
+
+schedule
+  - year
+  - month
+
+Day
+ - day
+ - task
+
+Values
+ - 夢100
+ - freeTitle
