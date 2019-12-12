@@ -23,7 +23,7 @@ body {
   padding-left: 70px;
   margin: 0;
   /* background: skyblue; */
-  width: 300px;
+  width: 230px;
   height: 100px;
   line-height: 100px;
 }
@@ -60,6 +60,10 @@ body {
   color: #222;
 }
 
+.mo {
+  display: none;
+}
+
 /*   top   */
 .background {
   position: relative;
@@ -69,6 +73,8 @@ body {
   background-size: cover;
   background-position: center bottom;
 }
+
+/*   login   */
 
 .member_form {
   position: absolute;
@@ -209,4 +215,10 @@ footer {
 footer p {
   text-align: center;
   line-height: 150px;
+}
+
+
+/* sns */
+#sns {
+  display: none;
 }
