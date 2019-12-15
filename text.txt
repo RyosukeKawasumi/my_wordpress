@@ -13,6 +13,9 @@ LOGIN
 -new member display
 -password re display
 
+passwprd
+-設定したメールアドレスに送る
+
 
 plan
  - 長期 -- ~end
