@@ -1,5 +1,18 @@
+TOP
+- menu
+- LOGIN
+- new member
+-forget password
+
+
 About
  -概要
+
+LOGIN
+-login display
+-new member display
+-password re display
+
 
 plan
  - 長期 -- ~end
@@ -18,3 +31,8 @@ Day
 Values
  - 夢100
  - freeTitle
+
+
+
+main-manu(ipad/iphone)
+- list -> scroll menu

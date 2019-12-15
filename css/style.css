@@ -60,11 +60,11 @@ body {
   color: #222;
 }
 
-.mo {
+#tab {
   display: none;
 }
 
-/*   top   */
+/*   background   */
 .background {
   position: relative;
   background:  linear-gradient(45deg,rgba(255, 255, 255, .5)20%,rgba(255, 255, 255, .6)40%, rgba(255, 255, 255, 1)60%),url(../img/sample.jpg);

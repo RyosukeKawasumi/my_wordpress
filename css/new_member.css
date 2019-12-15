@@ -1,0 +1,641 @@
+@media screen and (min-width: 770px) {
+
+/*   body   */
+
+body {
+  margin: 0;
+  font-family: 'Arial', 'sans-serif';
+  user-select: none;
+}
+
+
+
+/*   nav   */
+
+.value {
+  width: 100%;
+  height: 100px;
+  /* background: #eee; */
+}
+
+.title h1 {
+  float: left;
+  font-size: 50px;
+  text-align: center;
+  padding-left: 70px;
+  margin: 0;
+  /* background: skyblue; */
+  width: 230px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.menu nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  /* background: pink; */
+  list-style: none;
+  display: flex;
+  width: 60vw;
+  height: 100px;
+  justify-content: space-around;
+}
+
+.menu ul li {
+  font-size: 20px;
+  width: 80px;
+  height: 50px;
+  /* background: tomato; */
+  text-align: center;
+  transform: translate(0, 30px);
+  line-height: 50px;
+  transition: .2s;
+}
+
+.menu ul li:hover {
+  opacity: .5;
+}
+
+.menu nav ul a {
+  text-decoration: none;
+  color: #222;
+}
+
+#tab {
+  display: none;
+}
+
+/*   background   */
+.background {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  /* background-color: #333; */
+}
+
+
+/*   new_member   */
+
+.registre {
+  width: 70%;
+  height: 100px;
+  background: #111;
+  color: #fff;
+  margin: 50px auto;
+  border-radius: 15px;
+}
+
+.registre h1 {
+  text-align: center;
+  line-height: 100px;
+}
+
+.new_members {
+  /* background: gold; */
+  width: 100%;
+  height: 800px;
+}
+
+.register_form {
+  width: 70%;
+  /* background: pink; */
+  margin: 0 auto;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.information #email {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.member {
+  width: 90%;
+  height: 50px;
+  margin: 0 auto;
+}
+
+/*   checkbox   */
+.checkbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.checkbox p {
+  margin: 0;
+  width: 350px;
+}
+
+.terms {
+  margin: 6px 5px 0 5px;
+}
+
+
+
+/*   register_btn   */
+
+.register_btn button {
+  background: skyblue;
+  display: inline-block;
+  width: 355px;
+  height: 50px;
+  color: #fff;
+  margin-top: 50px;
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.register_btn {
+  transition: .3s;
+  text-align: center;
+}
+
+.register_btn:hover {
+  opacity: .8;
+}
+
+.lead p {
+  margin-top; 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.lead {
+  transition: .3s;
+}
+.lead:hover {
+  opacity: .5;
+}
+
+.lead a{
+  text-decoration: none;
+  color: #333;
+}
+
+
+/*   footer   */
+
+footer {
+  background: #777;
+  width: 100%;
+  height: 150px;
+}
+
+footer p {
+  text-align: center;
+  line-height: 150px;
+}
+
+}
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  body {
+    margin: 0;
+    font-family: 'Arial', 'sans-serif';
+    user-select: none;
+    /* background: pink; */
+  }
+
+  .all {
+    overflow: hidden;
+  }
+
+
+  /*   nav   */
+
+  .menu {
+    position: absolute;
+    top: -310px;
+    z-index: 1;
+    width: 100%;
+    height: 305px;
+    background: #333;
+    /* opacity: .5; */
+  }
+
+  .menu nav ul {
+    margin: 0;
+      padding: 0;
+    list-style: none;
+  }
+
+  .menu ul li {
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    /* background: tomato; */
+    text-align: center;
+    line-height: 50px;
+    transition: .2s;
+    margin: 0 auto;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  .menu ul li:hover {
+    opacity: .5;
+  }
+
+  .menu nav ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #tab {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    background: #333;
+    opacity: .5;
+  }
+
+  #tab p {
+    width: 100%;
+    /* margin: 0; */
+    text-align: right;
+    color: #fff;
+  }
+
+  /*   background   */
+
+  .background {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    /* background-color: #333; */
+  }
+
+  /*   title   */
+
+  .title h1 {
+    /* float: left; */
+    font-size: 50px;
+    text-align: center;
+    padding-top: 100px;
+    margin: 0;
+    /* background: skyblue; */
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  /*   new_member   */
+
+  .registre {
+    width: 70%;
+    height: 80px;
+    background: #111;
+    color: #fff;
+    margin: 50px auto;
+    border-radius: 15px;
+  }
+
+  .registre h1 {
+    text-align: center;
+    line-height: 80px;
+  }
+
+  .new_members {
+    /* background: gold; */
+    width: 100%;
+    height: 530px;
+  }
+
+  .register_form {
+    width: 70%;
+    /* background: pink; */
+    margin: 0 auto;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .information #email {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .member {
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  /*   checkbox   */
+  .checkbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .checkbox p {
+    margin: 0;
+    width: 350px;
+  }
+
+  .terms {
+    margin: 6px 5px 0 5px;
+  }
+
+
+
+  /*   register_btn   */
+
+  .register_btn button {
+    background: skyblue;
+    display: inline-block;
+    width: 355px;
+    height: 50px;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .register_btn {
+    transition: .3s;
+    text-align: center;
+  }
+
+  .register_btn:hover {
+    opacity: .8;
+  }
+
+  .lead p {
+    margin-top; 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .lead {
+    transition: .3s;
+  }
+  .lead:hover {
+    opacity: .5;
+  }
+
+  .lead a{
+    text-decoration: none;
+    color: #333;
+  }
+
+
+  /*   footer   */
+
+  footer {
+    background: #777;
+    width: 100%;
+    height: 150px;
+  }
+
+  footer p {
+    text-align: center;
+    line-height: 150px;
+  }
+
+}
+
+@media screen and (max-width: 479px){
+  body {
+    margin: 0;
+    font-family: 'Arial', 'sans-serif';
+    user-select: none;
+    /* background: skyblue; */
+  }
+
+  .all {
+    overflow: hidden;
+  }
+
+
+  /*   nav   */
+
+  .menu {
+    position: absolute;
+    top: -310px;
+    z-index: 1;
+    width: 100%;
+    height: 305px;
+    background: #333;
+    /* opacity: .5; */
+  }
+
+  .menu nav ul {
+    margin: 0;
+      padding: 0;
+    list-style: none;
+  }
+
+  .menu ul li {
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    /* background: tomato; */
+    text-align: center;
+    line-height: 50px;
+    transition: .2s;
+    margin: 0 auto;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  .menu ul li:hover {
+    opacity: .5;
+  }
+
+  .menu nav ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #tab {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    background: #333;
+    opacity: .5;
+  }
+
+  #tab p {
+    width: 100%;
+    /* margin: 0; */
+    text-align: right;
+    color: #fff;
+  }
+
+  /*   background   */
+
+  .background {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    /* background-color: #333; */
+  }
+
+  /*   title   */
+
+  .title h1 {
+    /* float: left; */
+    font-size: 40px;
+    text-align: center;
+    padding-top: 100px;
+    margin: 0;
+    /* background: skyblue; */
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  /*   new_member   */
+
+  .registre {
+    width: 70%;
+    height: 50px;
+    background: #111;
+    color: #fff;
+    margin: 50px auto;
+    border-radius: 15px;
+  }
+
+  .registre h1 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .new_members {
+    /* background: gold; */
+    width: 100%;
+    height: 530px;
+  }
+
+  .register_form {
+    width: 70%;
+    /* background: pink; */
+    margin: 0 auto;
+  }
+
+  .register_form input {
+    border: 1px solid #999;
+    /* border-radius: 10px; */
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .information #email {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .member {
+    width: 90%;
+    height: 30px;
+    margin: 0 auto;
+  }
+
+  /*   checkbox   */
+  .checkbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .checkbox p {
+    margin: 0;
+    font-weight: normal;
+    font-size: 12px;
+    color: #777;
+    width: 350px;
+  }
+
+  .terms {
+    margin: 4px 3px 0 3px;
+  }
+
+
+
+  /*   register_btn   */
+
+  .register_btn button {
+    background: skyblue;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .register_btn {
+    transition: .3s;
+    text-align: center;
+  }
+
+  .register_btn:hover {
+    opacity: .8;
+  }
+
+  .lead p {
+    margin-top; 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .lead {
+    transition: .3s;
+  }
+  .lead:hover {
+    opacity: .5;
+  }
+
+  .lead a{
+    text-decoration: none;
+    color: #333;
+  }
+
+
+  /*   footer   */
+
+  footer {
+    background: #777;
+    width: 100%;
+    height: 150px;
+  }
+
+  footer p {
+    text-align: center;
+    line-height: 150px;
+  }
+}
