@@ -1,3 +1,9 @@
+start
+  - jquery -
+- load画面
+- スライドショー
+- topへ戻るボタン
+
 TOP
 - menu
 - LOGIN

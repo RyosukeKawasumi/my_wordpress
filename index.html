@@ -101,6 +101,7 @@
         </div>
       </a>
     </section> <!-- /list -->
+    <div id="top_btn"></div>
 
     <div id="sns">
       <a href=""><div class="twitter"><p>Twitter</p></div></a>
@@ -115,11 +116,30 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
+  // middle or small menu画面
     $(function() {
       $('.navbar_toggle').on('click', function ()
       {
         $(this).toggleClass('open');
         $('.menu').toggleClass('open');
+      });
+
+      // #top_btn scrollしたら表示
+      var amount = 200; //スクロール量(px)の設定(200px)
+      $('#top_btn').hide(); //非表示
+
+      $(window).scroll(function() { //windowをscrollしたら次の処理
+        var scrollPoint = $(this).scrollTop(); // 変数宣言
+        (scrollPoint > amount)?$('#top_btn').fadeIn():
+        (scrollPoint < amount)?$('#top_btn').fadeOut():
+        $('.#top_btn').show();
+      });
+
+      $('#top_btn').click(function () {
+        $('body, html').animate({
+          scrollTop: 0
+        }, 300);
+        return false;
       });
     });
   </script>
