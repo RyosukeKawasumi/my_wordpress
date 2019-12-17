@@ -60,7 +60,7 @@ body {
   color: #222;
 }
 
-#tab {
+.navbar_toggle {
   display: none;
 }
 
