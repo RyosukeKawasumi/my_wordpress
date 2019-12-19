@@ -205,15 +205,16 @@ body {
 
 
 /*   top_btn   */
-#top_btn {
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  background: #000;
+
+#top_btn p {
+  display: none;
 }
+
+/* sns */
+#sns p {
+  display: none;
+}
+
 
 
 /*   footer   */
@@ -227,10 +228,4 @@ footer {
 footer p {
   text-align: center;
   line-height: 150px;
-}
-
-
-/* sns */
-#sns {
-  display: none;
 }

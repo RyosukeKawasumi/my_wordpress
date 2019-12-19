@@ -305,6 +305,25 @@ body {
 }
 
 
+/*   top_btn   */
+
+#top_btn {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  width: 100px;
+  height: 70px;
+  background: #fff;
+  opacity: .7;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0;
+}
+
 
 
 /*   footer   */

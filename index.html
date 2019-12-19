@@ -101,9 +101,9 @@
         </div>
       </a>
     </section> <!-- /list -->
-    <div id="top_btn"></div>
+    <div id="top_btn" class="scroll_hide"><p>TOP</p></div>
 
-    <div id="sns">
+    <div id="sns" class="scroll_hide">
       <a href=""><div class="twitter"><p>Twitter</p></div></a>
       <a href=""><div class="twitter"><p>Twitter</p></div></a>
       <a href=""><div class="twitter"><p>Twitter</p></div></a>
@@ -126,13 +126,13 @@
 
       // #top_btn scrollしたら表示
       var amount = 200; //スクロール量(px)の設定(200px)
-      $('#top_btn').hide(); //非表示
+      $('.scroll_hide').hide(); //非表示
 
       $(window).scroll(function() { //windowをscrollしたら次の処理
         var scrollPoint = $(this).scrollTop(); // 変数宣言
-        (scrollPoint > amount)?$('#top_btn').fadeIn():
-        (scrollPoint < amount)?$('#top_btn').fadeOut():
-        $('.#top_btn').show();
+        (scrollPoint > amount)?$('.scroll_hide').fadeIn():
+        (scrollPoint < amount)?$('.scroll_hide').fadeOut():
+        $('.scroll_hide').show();
       });
 
       $('#top_btn').click(function () {

@@ -301,6 +301,19 @@ body {
 }
 
 
+/*   top_btn   */
+
+#top_btn {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
+
+
 
 /*   footer   */
 
