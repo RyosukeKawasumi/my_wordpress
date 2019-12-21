@@ -116,15 +116,16 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
-  // middle or small menu画面
+
     $(function() {
+      // middle or small menu画面開閉設定
       $('.navbar_toggle').on('click', function ()
       {
         $(this).toggleClass('open');
         $('.menu').toggleClass('open');
       });
 
-      // #top_btn scrollしたら表示
+      // #top_btn scrollしたらtopへ戻る表示設定
       var amount = 200; //スクロール量(px)の設定(200px)
       $('.scroll_hide').hide(); //非表示
 
@@ -141,7 +142,15 @@
         }, 300);
         return false;
       });
+
+
+      //zoomしてslideshowをしたい
+      //background slide show設定
+      //backgroundの画像
+      //slide show
+      //間隔
     });
   </script>
+  <script src="js/main.js"></script>
   </body>
 </html>
