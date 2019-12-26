@@ -6,14 +6,20 @@ body {
   user-select: none;
 }
 
+.all {
+  overflow: auto;
+}
 
 
 /*   nav   */
 
 .value {
+  position: fixed;
+  top: 0px;
+  z-index: 8000;
+  /* background: #fff; */
   width: 100%;
   height: 100px;
-  /* background: #eee; */
 }
 
 .title h1 {
@@ -64,15 +70,22 @@ body {
   display: none;
 }
 
+
+
 /*   background   */
+
+
 .background {
   position: relative;
-  background:  linear-gradient(45deg,rgba(255, 255, 255, .5)20%,rgba(255, 255, 255, .6)40%, rgba(255, 255, 255, 1)60%),url(../img/sample.jpg);
-  width: 100%;
-  height: 650px;
-  background-size: cover;
-  background-position: center bottom;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 }
+
+.background img {
+  filter: grayscale(100%) contrast(0.9);
+}
+
 
 /*   login   */
 
