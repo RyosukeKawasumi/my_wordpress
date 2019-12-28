@@ -13,11 +13,7 @@
     <div class="all">
       <div id="Opening">
         <div class="background">
-            <!-- <img class="Opening__img" src="img/sample.jpg" width="100%" height="700">
-            <img class="Opening__img" src="img/clock.jpg" width="100%" height="700">
-            <img class="Opening__img" src="img/desk_list.jpg" width="100%" height="700"> -->
-        </div>
-      </div><!-- /opening -->
+      <!-- </div><! /opening -->
       <div class="value">
           <div class="title">
             <h1>Values</h1>
@@ -40,6 +36,7 @@
           </nav>
         </div> <!-- /menu -->
       </div><!-- /value -->
+      </div>
       <!-- form -->
       <div class="member_form">
          <div class="address">
@@ -61,7 +58,7 @@
 <!-- about -->
     <section class="container">
       <div class="about">
-        <h2>ABOUT</h2>
+        <h2> - ABOUT - </h2>
       </div>
 
       <div class="contents">
@@ -74,31 +71,34 @@
     <section class="list">
 
       <a href="">
-        <div class="plan">
-          <div class="txt_img"><img src="img/list.png" width="100" height="100"></div>
-          <div class="intro">
-            <h3>Plan</h3>
-            <p>価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。</p>
+        <div class="select_box">
+          <div class="plan_1">
+            <div class="intro">
+              <h3>Plan</h3>
+              <p>価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。</p>
+            </div>
           </div>
         </div>
       </a>
 
       <a href="">
-        <div class="plan">
-          <div class="txt_img"><img src="img/list.png" width="100" height="100"></div>
-          <div class="intro">
-            <h3>Month</h3>
-            <p>計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。</p>
+        <div class="select_box">
+          <div class="plan_2">
+            <div class="intro">
+              <h3>Month</h3>
+              <p>計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。</p>
+            </div>
           </div>
         </div>
       </a>
 
       <a href="">
-        <div class="plan">
-          <div class="txt_img"><img src="img/list.png" width="100" height="100"></div>
-          <div class="intro">
-            <h3>Days</h3>
-            <p>日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。</p>
+        <div class="select_box">
+          <div class="plan_3">
+            <div class="intro">
+              <h3>Days</h3>
+              <p>日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。</p>
+            </div>
           </div>
         </div>
       </a>
@@ -117,6 +117,7 @@
     </footer>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/jquery.bgswitcher.js"></script>
   <script>
 
     $(function() {
@@ -151,7 +152,32 @@
       //backgroundの画像
       //slide show
       //間隔
+      $(function($) {
 
+
+  $('.background').bgSwitcher({
+      images: ['img/sample.jpg','img/clock.jpg','img/bisiness_pen.jpg'], // 切替背景画像を指定
+      interval: 5000, // 背景画像を切り替える間隔を指定 3000=3秒
+      loop: true, // 切り替えを繰り返すか指定 true=繰り返す　false=繰り返さない
+      shuffle: true, // 背景画像の順番をシャッフルするか指定 true=する　false=しない
+      effect: "fade", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
+      duration: 2000, // エフェクトの時間を指定します。
+      easing: "swing" // エフェクトのイージングをlinear,swingから指定
+  });
+});
+
+
+  $(function(){
+
+    $('#top').click(function(){
+      var speed = 1000;
+      var href = $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    });
+  });
 
     });
   </script>
