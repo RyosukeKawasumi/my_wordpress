@@ -7,53 +7,44 @@
     <link rel="stylesheet" href="css/style.css" media="screen and (min-width: 769px)"> <!-- pc -->
     <link rel="stylesheet" href="css/middle.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet-->
     <link rel="stylesheet" href="css/small.css" media="screen and (max-width: 479px)"> <!-- mobile -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- fontawesome -->
 
   </head>
   <body>
     <div class="all">
+<!-- TOP -->
       <div id="Opening">
         <div class="background">
-      <!-- </div><! /opening -->
-      <div class="value">
-          <div class="title">
-            <h1>Values</h1>
-          </div> <!-- /title -->
-          <div class="navbar_toggle">
-            <span class="navbar_toggle_icon"></span>
-            <span class="navbar_toggle_icon"></span>
-            <span class="navbar_toggle_icon"></span>
-          </div><!-- /toggle -->
-        <div class="menu">
-          <nav>
-            <ul>
-              <li><a href="">TOP</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Values</a></li>
-              <li><a href="plan.html">plan</a></li>
-              <li><a href="">month</a></li>
-              <li><a href="">Day</a></li>
-            </ul>
-          </nav>
-        </div> <!-- /menu -->
-      </div><!-- /value -->
-      </div>
-      <!-- form -->
-      <div class="member_form">
-         <div class="address">
-           <input type="email" class="member" id="email" name="email" placeholder="メールアドレスを入力してください。" value="">
-           <input type="password" class="member" id="password" name="password" placeholder="パスワードを入力" value="">
-         </div> <!-- /address -->
-           <!-- log in -->
-           <div class="btn">
-             <button type="submit">LOGIN</button>
-           </div><!-- /log in -->
-           <!-- new member -->
-           <div class="new">
-            <div><a href="new_member.html"><p>まだ新規会員登録がお済みでない方はこちら</p></a></div>
-            <div><a href="re_password.html"><p>パスワードをお忘れの方</p></a></div>
-           </div> <!-- /new member -->
-      </div><!-- /form -->
-
+          <div class="value">
+              <div class="title">
+                <h1>Value</h1>
+              </div> <!-- /title -->
+              <div class="navbar_toggle">
+                <span class="navbar_toggle_icon"></span>
+                <span class="navbar_toggle_icon"></span>
+                <span class="navbar_toggle_icon"></span>
+              </div><!-- /toggle -->
+            <div class="menu">
+              <nav>
+                <ul>
+                  <li><a href="">TOP</a></li>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Values</a></li>
+                  <li><a href="plan.html">plan</a></li>
+                  <li><a href="">month</a></li>
+                  <li><a href="">Day</a></li>
+                  <li><a href="login.html"><span><i class="fas fa-lock"></i></span></a></li>
+                </ul>
+              </nav>
+            </div> <!-- /menu -->
+          </div><!-- /value -->
+        </div><!-- /background -->
+        <div class="filter">
+          <div class="spot">
+            <p>ABC<br>ABC</p>
+          </div>
+        </div>
+      </div><!-- /Opening -->
 
 <!-- about -->
     <section class="container">
@@ -69,39 +60,46 @@
 <!--  list  -->
 
     <section class="list">
-
       <a href="">
-        <div class="select_box">
-          <div class="plan_1">
-            <div class="intro">
-              <h3>Plan</h3>
-              <p>価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。</p>
+        <div class="fadeIn">
+          <div class="select_box">
+            <div class="plan_1">
+              <div class="intro">
+                <h3>Plan</h3>
+                <p>価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。</p>
+              </div>
             </div>
           </div>
         </div>
       </a>
 
-      <a href="">
-        <div class="select_box">
-          <div class="plan_2">
-            <div class="intro">
-              <h3>Month</h3>
-              <p>計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。</p>
+      <div class="boxies">
+        <a href="">
+          <div class="fadeIn">
+            <div class="select_box">
+              <div class="plan_2">
+                <div class="intro">
+                  <h3>Month</h3>
+                  <p>計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a href="">
-        <div class="select_box">
-          <div class="plan_3">
-            <div class="intro">
-              <h3>Days</h3>
-              <p>日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。</p>
+        <a href="">
+          <div class="fadeIn">
+            <div class="select_box">
+              <div class="plan_3">
+                <div class="intro">
+                  <h3>Days</h3>
+                  <p>日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </section> <!-- /list -->
     <div id="top_btn" class="scroll_hide"><p>TOP</p></div>
 
@@ -112,9 +110,11 @@
       <a href=""><div class="twitter"><p>Twitter</p></div></a>
     </div>
 
-    <footer>
-      <p>copyrite 2019 -Rivival- Kawasumi.R.</p>
-    </footer>
+    <div class="fadeIn">
+      <footer>
+        <p>copyrite 2019 -Rivival- Kawasumi.R.</p>
+      </footer>
+    </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/jquery.bgswitcher.js"></script>
@@ -147,28 +147,22 @@
       });
 
 
-      //zoomしてslideshowをしたい
-      //background slide show設定
-      //backgroundの画像
-      //slide show
-      //間隔
-      $(function($) {
 
+      // slide show setting
+  $(function($) {
 
-  $('.background').bgSwitcher({
-      images: ['img/sample.jpg','img/clock.jpg','img/bisiness_pen.jpg'], // 切替背景画像を指定
+    $('.background').bgSwitcher({
+      images: ['img/sample.jpg','img/clock.jpg','img/bisiness.jpg','img/darkblue.jpg'], // 切替背景画像を指定
       interval: 5000, // 背景画像を切り替える間隔を指定 3000=3秒
       loop: true, // 切り替えを繰り返すか指定 true=繰り返す　false=繰り返さない
-      shuffle: true, // 背景画像の順番をシャッフルするか指定 true=する　false=しない
+      shuffle: false, // 背景画像の順番をシャッフルするか指定 true=する　false=しない
       effect: "fade", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
       duration: 2000, // エフェクトの時間を指定します。
       easing: "swing" // エフェクトのイージングをlinear,swingから指定
+    });
   });
-});
-
 
   $(function(){
-
     $('#top').click(function(){
       var speed = 1000;
       var href = $(this).attr("href");
@@ -179,7 +173,30 @@
     });
   });
 
+
+
+  // fadeIn setting
+
+  $(function() {
+    $(window).scroll(function(){  // windowがスクロールされたら以下の処理実行
+      $('.fadeIn').each(function(){ // .each()で.fadeInクラスの付いた要素1つずつに順番に処理を行う
+        var position     = $(this).offset().top; // .offset()でページの最上部から .fadein が付いた要素までの距離を取得 → 変数positionに代入
+        var scroll       = $(window).scrollTop(); // .scrollTop()で、スクロールした量を取得、変数scrollに代入
+        var windowHeight = $(window).height(); // .height()で、ウィンドウの高さを取得して、変数windowHeightに代入
+        if (scroll > position - windowHeight){ // スクロール量が、「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時
+          $(this).addClass('active'); // .fadeIn が付いた要素に active クラス が付く
+        }
+      });
     });
+  });
+
+  $(function(){
+    $('.bot').fadeIn(3000);
+    // $('.bot').fadeOut(4000);
+
+  });
+
+  }); // first function
   </script>
   <script type="text/javascript" src="js/main.js"></script>
   </body>
