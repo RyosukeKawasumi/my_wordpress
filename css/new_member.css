@@ -28,6 +28,10 @@ body {
   line-height: 100px;
 }
 
+.title a {
+  color: #222;
+}
+
 .menu nav ul {
   float: right;
   margin: 0;
