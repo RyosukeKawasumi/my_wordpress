@@ -1,70 +1,124 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Value</title>
-    <link rel="stylesheet" href="css/new_member.css" media="screen and (min-width: 769px)"> <!-- pc -->
-    <link rel="stylesheet" href="css/new_member.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet-->
-    <link rel="stylesheet" href="css/new_member.css" media="screen and (max-width: 479px)"> <!-- mobile -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Value</title>
+  <link rel="stylesheet" href="css/new_member.css" media="screen and (min-width: 769px)"> <!-- pc -->
+  <link rel="stylesheet" href="css/new_member.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet-->
+  <link rel="stylesheet" href="css/new_member.css" media="screen and (max-width: 479px)"> <!-- mobile -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- fontawesome -->
+</head>
+<body>
+  <div class="all">
+  <div class="background">
+    <div class="value">
+      <div class="title">
+        <h1>Values</h1>
+      </div> <!-- /title -->
+      <div class="login">
+        <div class="login_2">
+          <a href="login.html">
+            <span>
+              <i class="fas fa-lock"></i>
+            </span>
+          </a>
+        </div><!-- login_2 -->
+        <div class="navbar_toggle">
+          <span class="navbar_toggle_icon"></span>
+          <span class="navbar_toggle_icon"></span>
+          <span class="navbar_toggle_icon"></span>
+        </div><!-- /toggle -->
+      </div><!-- /login -->
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a href="">TOP</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Values</a></li>
+            <li><a href="plan.html">plan</a></li>
+            <li><a href="">month</a></li>
+            <li><a href="">Day</a></li>
+            <li class="login_1">
+              <a href="login.html">
+                <span><i class="fas fa-lock"></i></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div> <!-- /menu -->
+    </div><!-- /value -->
 
-  </head>
-  <body>
-    <div class="all">
-    <div class="background">
-      <div class="value">
-        <div class="title">
-          <h1>Values</h1>
-        </div> <!-- /title -->
-        <div class="menu">
-          <nav>
-            <ul>
-              <li><a href="index.html">TOP</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Values</a></li>
-              <li><a href="">plan</a></li>
-              <li><a href="">month</a></li>
-              <li><a href="">Day</a></li>
-            </ul>
-          </nav>
-        </div> <!-- /menu -->
-        <div id="tab"><p>menu</p></div>
-      </div><!-- /value -->
+    <section class="new_members">
+      <div class="registre"><h1>ログイン</h1></div>
+        <!-- register form -->
+        <div class="register_form">
+           <div class="information">
+             <input type="email" class="member" id="email" name="email" placeholder="メールアドレスを入力してください。" value="">
+             <input type="password" class="member" id="password" name="password" placeholder="パスワードを入力" value="">
+           </div> <!-- /information -->
 
-      <section class="new_members">
-        <div class="registre"><h1>ログイン</h1></div>
-          <!-- register form -->
-          <div class="register_form">
-             <div class="information">
-               <input type="email" class="member" id="email" name="email" placeholder="メールアドレスを入力してください。" value="">
-               <input type="password" class="member" id="password" name="password" placeholder="パスワードを入力" value="">
-             </div> <!-- /information -->
+             <!-- register btn-->
+             <div class="register_btn">
+               <button type="submit">LOGIN</button>
+             </div><!-- /register btn -->
+             <div class="lead">
+               <p><a href="re_password.html">パスワードをお忘れの方はこちら</a></p>
+             </div>
+             <div class="lead">
+               <p><a href="new_member.html">まだ会員登録がお済みでない方はこちら</a></p>
+             </div>
+         </div><!-- /register form -->
 
-               <!-- register btn-->
-               <div class="register_btn">
-                 <button type="submit">LOGIN</button>
-               </div><!-- /register btn -->
-               <div class="lead">
-                 <p><a href="re_password.html">パスワードをお忘れの方はこちら</a></p>
-               </div>
-               <div class="lead">
-                 <p><a href="new_member.html">まだ会員登録がお済みでない方はこちら</a></p>
-               </div>
-           </div><!-- /register form -->
-
-      </section>
+    </section>
 
 
 
-    <div id="sns">
-      <a href=""><div class="twitter">Twitter</div></a>
-      <a href=""><div class="twitter">contact</div></a>
-      <a href=""><div class="twitter">facebook</div></a>
-    </div>
+<!--  SNS  -->
+
+    <div id="sns" class="scroll_hide">
+      <a href="">
+        <div class="twitter">
+          <p><i class="fab fa-twitter-square"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fas fa-share"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fab fa-instagram"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fas fa-envelope"></i></p>
+        </div>
+      </a>
+    </div><!-- /#sns -->
 
     <footer>
       <p>copyrite 2019 -Rivival- Kawasumi.R.</p>
     </footer>
+<!--  script  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/jquery.bgswitcher.js"></script>
+  <script>
+      $(function() {
+        // middle or small menu画面開閉設定
+          $('.navbar_toggle').on('click', function ()
+          {
+            $(this).toggleClass('open');
+            $('.menu').toggleClass('open');
+          });
+    });
+  </script>
   </div>
   </body>
 </html>

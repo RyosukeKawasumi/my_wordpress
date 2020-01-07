@@ -1,7 +1,6 @@
 @media screen and (max-width: 769px) and (min-width: 480px) {
 
 body {
-  /* background: pink; */
   margin: 0;
   font-family: 'Arial', 'sans-serif';
   user-select: none;
@@ -14,28 +13,23 @@ body {
 
 /*   nav   */
 
-/* .site_header {
-  position: fixed;
-  width: 100%;
-} */
-
 .value {
+  position: relative;
   width: 100%;
   height: 62px;
-  position: relative;
   background: #666;
 }
 
 /*   .menu部分   */
 
 .menu {
+  position: absolute;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   -webkit-transition:ease .5s;
   transition:ease .5s;
   z-index: 1;
   background: #333;
-  position: absolute;
   top: 62px;
   width: 100%;
   opacity: .8;
@@ -43,7 +37,7 @@ body {
 
 .menu nav ul {
   margin: 0;
-    padding: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -81,10 +75,25 @@ body {
 
  /*   menu tab   */
 
+.login_2 {
+  position: absolute;
+  z-index: 9999;
+  top: 16px;
+  right: 20px;
+}
+
+.login_2 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+ /*   toggle   */
+
 .navbar_toggle {
   position: absolute;
   top: 20px;
-  right: 10px;
+  left: 20px;
   z-index: 2;
 }
 
@@ -123,26 +132,52 @@ body {
 /*   background   */
 
 .background {
-  position: relative;
-  background:  linear-gradient(45deg,rgba(255, 255, 255, .5)20%,rgba(255, 255, 255, .6)40%, rgba(255, 255, 255, 1)60%),url(../img/sample.jpg);
+  position:relative;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-position: bottom;
+	background-size: cover;
   width: 100%;
   height: 650px;
-  background-size: cover;
-  background-position: center bottom;
 }
+
+.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  background: #000;
+  opacity: .7;
+}
+
+.filter .spot {
+  /* position: absolute; */
+  width: 300px;
+  height: 300px;
+  /* background: #fff; */
+  margin: 200px auto 0 auto;
+}
+
+.filter .spot p {
+  display: none;
+  font-family: 'impact';
+  width: 255px;
+  height: 255px;
+  color: #222;
+  font-size: 100px;
+  border: 5px solid #E3C700;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 5px;
+  transform: translate(0px, -20px);
+}
+
 
 /*   title   */
 
 .title h1 {
-  /* float: left; */
-  font-size: 50px;
-  text-align: center;
-  padding-top: 100px;
-  margin: 0;
-  /* background: skyblue; */
-  width: 100%;
-  height: 200px;
-  line-height: 200px;
+  display: none;
 }
 
 /*   login   */
@@ -222,32 +257,90 @@ body {
 /*   list   */
 
 .list {
-  /* display: flex; */
-  /* justify-content: space-around; */
-  width: 100%;
-  height: 800px;
+  width: 90%;
+  height: 900px;
+  margin: 0 auto;
 }
 
 .list h3, .list p {
   text-align: center;
   font-size: 24px;
+  color: #fff;
 }
 
-.plan {
-  display: flex;
-  width: 80%;
-  height: 200px;
-  margin: 30px auto;
-  background: #aaa;
-  transition: .3s;
+.list h3 {
+  font-size: 40px;
+  padding-top: 20px;
+  margin-bottom: 10px;
 }
 
-.list .txt_img {
-  width: 100px;
-  height: 100px;
+/* list background  setting */
+
+.list .plan_1 {
+  background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(../img/deskwork.jpg);
+  background-size: cover;
+  background-position: bottom;
+  filter: grayscale(100%) contrast(0.9);
+  border-radius: 5px;
+  width: 90%;
+  max-width: 1016px;
+  height: 250px;
+  padding-top: 0px;
+}
+
+.list .plan_2 {
+  background: linear-gradient(25deg, rgba(111, 134, 214, 0.4), rgba(72, 198, 239, 0.7)),url(../img/desk_list.jpg);
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 5px;
+  width: 90%;
+  height: 250px;
+  padding-top: 0px;
+  margin-top: 40px;
+}
+
+.list .plan_3 {
+  background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(../img/mission.jpg);
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 5px;
+  width: 90%;
+  height: 250px;
+  padding-top: 0px;
+  margin-top: 40px;
+}
+
+
+.plan_1, .plan_2, .plan_3 {
   margin: 0 auto;
-  padding: 40px 0 20px 0;
 }
+
+.intro {
+  line-height: 50px;
+}
+
+.select_box {
+  transition: .3s;
+  opacity: .9;
+}
+
+.select_box:hover {
+  opacity: .3;
+}
+
+/*   fade in setting   */
+.fadeIn {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1s;
+}
+
+.fadeIn.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*   list text settig  */
 
 .list p {
   font-size: 14px;
@@ -258,30 +351,14 @@ body {
 
 .list a {
   text-decoration: none;
-  color: #333;
-  /* transition: .3s; */
+  color: #000;
 }
-
-/* .list a:hover {
-  opacity: .4;
-} */
-
-
-.plan:hover {
-  opacity: .8;
-  padding: 10px;
-  -webkit-transform: scale(1.1, 1.1);
-  -moz-transform: scale(1.1, 1.1);
-  -o-transform: scale(1.1, 1.1);
-  -ms-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
-}
-
 
 /* sns */
 
 #sns {
   position: fixed;
+  z-index: 3;
   bottom: 0;
   display: flex;
   width: 100%;
@@ -293,15 +370,26 @@ body {
   color: #333;
   text-align: center;
   margin: 0;
-  line-height: 30px;
+  transition: .3s;
+}
+
+#sns a:hover {
+  opacity: .5;
 }
 
 .twitter {
   margin: 0;
   background: #fff;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   width: 25vw;
   height: 60px;
+  background: #333;
+}
+
+.twitter p {
+  font-size: 28px;
+  color: #fff;
+  margin-top: 15px;
 }
 
 
@@ -309,6 +397,7 @@ body {
 
 #top_btn {
   position: fixed;
+  z-index: 4;
   bottom: 70px;
   right: 10px;
   width: 100px;
@@ -329,7 +418,7 @@ body {
 /*   footer   */
 
 footer {
-  background: #777;
+  background: #333;
   width: 100%;
   height: 150px;
 }
@@ -337,6 +426,12 @@ footer {
 footer p {
   text-align: center;
   line-height: 150px;
+}
+
+/*   none -- display    */
+
+.login_1 {
+  display: none;
 }
 
 

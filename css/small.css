@@ -1,10 +1,7 @@
 @media screen and (max-width: 479px){
 
-
 body {
-  margin: 100%;
-  height: 100%;
-  background: skyblue;
+  /* background: pink; */
   margin: 0;
   font-family: 'Arial', 'sans-serif';
   user-select: none;
@@ -16,6 +13,7 @@ body {
 
 
 /*   nav   */
+
 
 .value {
   width: 100%;
@@ -79,10 +77,25 @@ body {
 
  /*   menu tab   */
 
+.login_2 {
+  position: absolute;
+  z-index: 9999;
+  top: 16px;
+  right: 20px;
+}
+
+.login_2 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+ /*   toggle   */
+
 .navbar_toggle {
   position: absolute;
   top: 20px;
-  right: 10px;
+  left: 20px;
   z-index: 2;
 }
 
@@ -121,34 +134,62 @@ body {
 /*   background   */
 
 .background {
-  position: relative;
-  background:  linear-gradient(45deg,rgba(255, 255, 255, .5)20%,rgba(255, 255, 255, .6)40%, rgba(255, 255, 255, 1)60%),url(../img/sample.jpg);
-  width: 100%;
-  height: 550px;
+  position:relative;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-position: bottom;
   background-size: cover;
-  background-position: center bottom;
+  width: 100%;
+  height: 650px;
 }
+
+.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  background: #000;
+  opacity: .7;
+}
+
+.filter .spot {
+  /* position: absolute; */
+  width: 300px;
+  height: 300px;
+  /* background: #fff; */
+  margin: 200px auto 0 auto;
+}
+
+.filter .spot p {
+  display: none;
+  font-family: 'impact';
+  width: 255px;
+  height: 255px;
+  color: #222;
+  font-size: 100px;
+  border: 5px solid #E3C700;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 5px;
+  transform: translate(0px, -20px);
+}
+
 
 /*   title   */
 
 .title h1 {
-  /* float: left; */
-  font-size: 40px;
-  text-align: center;
-  padding-top: 100px;
-  margin: 0;
-  /* background: skyblue; */
-  width: 100%;
-  height: 130px;
-  line-height: 120px;
+  display: none;
 }
 
 /*   login   */
 
 .member_form {
-  width: 80%;
-  margin: 180px auto 0 auto;
-  /* background: pink; */
+  position: absolute;
+  width: 355px;
+  left: 25%;
+  right: 25%;
+  top: 50%;
 }
 
 .address {
@@ -161,21 +202,19 @@ body {
 }
 
 .member {
-  width: 99%;
-  height: 30px;
-  border: 1px solid #999;
-  border-radius: 5px;
+  width: 350px;
+  height: 50px;
 }
 
 
 
 .btn button {
   background: skyblue;
-  width: 100%;
-  height: 30px;
+  width: 355px;
+  height: 50px;
   color: #fff;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: normal;
   letter-spacing: 3px;
   border: 0;
@@ -196,56 +235,115 @@ body {
 }
 
 /*   about   */
+
 .about h2 {
   margin-top: 150px;
-  font-size: 30px;
+  font-size: 46px;
   letter-spacing: 3px;
   color: #333;
   text-align: center;
 }
 
 .contents p {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   color: #333;
-  width: 80vw;
+  width: 80%;
   margin: 0 auto;
   line-height: 40px;
 }
 
 .container {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 
 /*   list   */
 
 .list {
-  /* display: flex; */
-  /* justify-content: space-around; */
-  width: 100%;
-  height: 700px;
+  width: 90%;
+  height: 900px;
+  margin: 0 auto;
 }
 
 .list h3, .list p {
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
+  color: #fff;
 }
 
-.plan {
-  display: flex;
-  width: 90%;
-  height: 180px;
-  margin: 30px auto;
-  background: #aaa;
-  transition: .3s;
+.list h3 {
+  font-size: 40px;
+  padding-top: 20px;
+  margin-bottom: 10px;
 }
 
-.list .txt_img {
-  width: 100px;
-  height: 100px;
+/* list background  setting */
+
+.list .plan_1 {
+  background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(../img/deskwork.jpg);
+  background-size: cover;
+  background-position: bottom;
+  filter: grayscale(100%) contrast(0.9);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1016px;
+  height: 250px;
+  padding-top: 0px;
+}
+
+.list .plan_2 {
+  background: linear-gradient(25deg, rgba(111, 134, 214, 0.4), rgba(72, 198, 239, 0.7)),url(../img/desk_list.jpg);
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 5px;
+  width: 100%;
+  height: 250px;
+  padding-top: 0px;
+  margin-top: 40px;
+}
+
+.list .plan_3 {
+  background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(../img/mission.jpg);
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 5px;
+  width: 100%;
+  height: 250px;
+  padding-top: 0px;
+  margin-top: 40px;
+}
+
+
+.plan_1, .plan_2, .plan_3 {
   margin: 0 auto;
-  padding: 40px 0 20px 0;
 }
+
+.intro {
+  line-height: 50px;
+}
+
+.select_box {
+  transition: .3s;
+  opacity: .9;
+}
+
+.select_box:hover {
+  opacity: .3;
+}
+
+/*   fade in setting   */
+.fadeIn {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1s;
+}
+
+.fadeIn.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*   list text settig  */
 
 .list p {
   font-size: 14px;
@@ -256,28 +354,14 @@ body {
 
 .list a {
   text-decoration: none;
-  color: #333;
-  /* transition: .3s; */
-}
-
-/* .list a:hover {
-  opacity: .4;
-} */
-
-
-.plan:hover {
-  opacity: .8;
-  padding: 10px;
-  -webkit-transform: scale(1.1, 1.1);
-  -moz-transform: scale(1.1, 1.1);
-  -o-transform: scale(1.1, 1.1);
-  -ms-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
+  color: #000;
 }
 
 /* sns */
+
 #sns {
   position: fixed;
+  z-index: 3;
   bottom: 0;
   display: flex;
   width: 100%;
@@ -289,28 +373,47 @@ body {
   color: #333;
   text-align: center;
   margin: 0;
-  line-height: 30px;
+  transition: .3s;
+}
+
+#sns a:hover {
+  opacity: .5;
 }
 
 .twitter {
   margin: 0;
   background: #fff;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   width: 25vw;
   height: 60px;
+  background: #333;
+}
+
+.twitter p {
+  font-size: 28px;
+  color: #fff;
+  margin-top: 15px;
 }
 
 
 /*   top_btn   */
 
 #top_btn {
+  z-index: 4;
   position: fixed;
-  bottom: 40px;
-  right: 30px;
-  border-radius: 50%;
+  bottom: 70px;
+  right: 10px;
   width: 100px;
-  height: 100px;
-  background: #000;
+  height: 70px;
+  background: #fff;
+  opacity: .7;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0;
 }
 
 
@@ -318,7 +421,7 @@ body {
 /*   footer   */
 
 footer {
-  background: #777;
+  background: #333;
   width: 100%;
   height: 150px;
 }
@@ -327,6 +430,5 @@ footer p {
   text-align: center;
   line-height: 150px;
 }
-
 
 }

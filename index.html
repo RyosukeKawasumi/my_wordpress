@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Value</title>
     <link rel="stylesheet" href="css/style.css" media="screen and (min-width: 769px)"> <!-- pc -->
-    <link rel="stylesheet" href="css/middle.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet-->
+    <link rel="stylesheet" href="css/middle.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet -->
     <link rel="stylesheet" href="css/small.css" media="screen and (max-width: 479px)"> <!-- mobile -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- fontawesome -->
 
-  </head>
-  <body>
+</head>
+<body>
     <div class="all">
+
 <!-- TOP -->
+
       <div id="Opening">
         <div class="background">
           <div class="value">
-              <div class="title">
-                <h1>Value</h1>
-              </div> <!-- /title -->
+            <div class="title">
+              <h1>Value</h1>
+            </div> <!-- /title -->
+            <div class="login">
+              <div class="login_2">
+                <a href="login.html">
+                  <span>
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </a>
+              </div><!-- login_2 -->
               <div class="navbar_toggle">
                 <span class="navbar_toggle_icon"></span>
                 <span class="navbar_toggle_icon"></span>
                 <span class="navbar_toggle_icon"></span>
               </div><!-- /toggle -->
+            </div><!-- /login -->
             <div class="menu">
               <nav>
                 <ul>
@@ -33,7 +44,11 @@
                   <li><a href="plan.html">plan</a></li>
                   <li><a href="">month</a></li>
                   <li><a href="">Day</a></li>
-                  <li><a href="login.html"><span><i class="fas fa-lock"></i></span></a></li>
+                  <li class="login_1">
+                    <a href="login.html">
+                      <span><i class="fas fa-lock"></i></span>
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </div> <!-- /menu -->
@@ -41,12 +56,14 @@
         </div><!-- /background -->
         <div class="filter">
           <div class="spot">
-            <p>ABC<br>ABC</p>
+            <p class="spot">XXX<br>XXX</p>
           </div>
         </div>
       </div><!-- /Opening -->
 
 <!-- about -->
+
+  <main>
     <section class="container">
       <div class="about">
         <h2> - ABOUT - </h2>
@@ -69,8 +86,8 @@
                 <p>価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。価値観。</p>
               </div>
             </div>
-          </div>
-        </div>
+          </div><!-- /select_box -->
+        </div><!-- /fadeIn -->
       </a>
 
       <div class="boxies">
@@ -83,8 +100,8 @@
                   <p>計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。計画。</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </div><!-- /select_box -->
+          </div><!-- /fadeIn -->
         </a>
 
         <a href="">
@@ -96,108 +113,152 @@
                   <p>日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。日々の行動。</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </div><!-- /select_box -->
+          </div><!-- /fadeIn -->
         </a>
-      </div>
+
+      </div><!-- /boxies -->
     </section> <!-- /list -->
-    <div id="top_btn" class="scroll_hide"><p>TOP</p></div>
+  </main>
+
+    <div id="top_btn" class="scroll_hide">
+      <p>TOP</p>
+    </div>
+
+<!--  SNS  -->
 
     <div id="sns" class="scroll_hide">
-      <a href=""><div class="twitter"><p>Twitter</p></div></a>
-      <a href=""><div class="twitter"><p>Twitter</p></div></a>
-      <a href=""><div class="twitter"><p>Twitter</p></div></a>
-      <a href=""><div class="twitter"><p>Twitter</p></div></a>
-    </div>
+      <a href="">
+        <div class="twitter">
+          <p><i class="fab fa-twitter-square"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fas fa-share"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fab fa-instagram"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fas fa-envelope"></i></p>
+        </div>
+      </a>
+    </div><!-- /#sns -->
+
+<!-- footer -->
 
     <div class="fadeIn">
       <footer>
         <p>copyrite 2019 -Rivival- Kawasumi.R.</p>
       </footer>
-    </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/jquery.bgswitcher.js"></script>
-  <script>
+    </div><!-- /fadeIn -->
 
-    $(function() {
-      // middle or small menu画面開閉設定
-      $('.navbar_toggle').on('click', function ()
-      {
-        $(this).toggleClass('open');
-        $('.menu').toggleClass('open');
-      });
+  </div><!-- /all -->
 
-      // #top_btn scrollしたらtopへ戻る表示設定
-      var amount = 200; //スクロール量(px)の設定(200px)
-      $('.scroll_hide').hide(); //非表示
+<!--  script  -->
 
-      $(window).scroll(function() { //windowをscrollしたら次の処理
-        var scrollPoint = $(this).scrollTop(); // 変数宣言
-        (scrollPoint > amount)?$('.scroll_hide').fadeIn():
-        (scrollPoint < amount)?$('.scroll_hide').fadeOut():
-        $('.scroll_hide').show();
-      });
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/jquery.bgswitcher.js"></script>
+<script>
 
-      $('#top_btn').click(function () {
-        $('body, html').animate({
-          scrollTop: 0
-        }, 300);
-        return false;
-      });
-
-
-
-      // slide show setting
-  $(function($) {
-
-    $('.background').bgSwitcher({
-      images: ['img/sample.jpg','img/clock.jpg','img/bisiness.jpg','img/darkblue.jpg'], // 切替背景画像を指定
-      interval: 5000, // 背景画像を切り替える間隔を指定 3000=3秒
-      loop: true, // 切り替えを繰り返すか指定 true=繰り返す　false=繰り返さない
-      shuffle: false, // 背景画像の順番をシャッフルするか指定 true=する　false=しない
-      effect: "fade", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
-      duration: 2000, // エフェクトの時間を指定します。
-      easing: "swing" // エフェクトのイージングをlinear,swingから指定
+$(function() {
+  // middle or small menu画面開閉設定
+    $('.navbar_toggle').on('click', function ()
+    {
+      $(this).toggleClass('open');
+      $('.menu').toggleClass('open');
     });
-  });
 
-  $(function(){
-    $('#top').click(function(){
-      var speed = 1000;
-      var href = $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $("html, body").animate({scrollTop:position}, speed, "swing");
+    // #top_btn scrollしたらtopへ戻る表示設定
+    var amount = 200; //スクロール量(px)の設定(200px)
+    $('.scroll_hide').hide(); //非表示
+
+    $(window).scroll(function()
+    { //windowをscrollしたら次の処理
+      var scrollPoint = $(this).scrollTop(); // 変数宣言
+      (scrollPoint > amount)?$('.scroll_hide').fadeIn():
+      (scrollPoint < amount)?$('.scroll_hide').fadeOut():
+      $('.scroll_hide').show();
+    });
+
+    $('#top_btn').click(function () {
+      $('body, html').animate({
+        scrollTop: 0
+      }, 300);
       return false;
     });
-  });
 
 
 
-  // fadeIn setting
+    // slide show setting
+    $(function($) {
 
-  $(function() {
-    $(window).scroll(function(){  // windowがスクロールされたら以下の処理実行
-      $('.fadeIn').each(function(){ // .each()で.fadeInクラスの付いた要素1つずつに順番に処理を行う
-        var position     = $(this).offset().top; // .offset()でページの最上部から .fadein が付いた要素までの距離を取得 → 変数positionに代入
-        var scroll       = $(window).scrollTop(); // .scrollTop()で、スクロールした量を取得、変数scrollに代入
-        var windowHeight = $(window).height(); // .height()で、ウィンドウの高さを取得して、変数windowHeightに代入
-        if (scroll > position - windowHeight){ // スクロール量が、「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時
-          $(this).addClass('active'); // .fadeIn が付いた要素に active クラス が付く
-        }
+      $('.background').bgSwitcher({
+        images: ['img/sample.jpg','img/clock.jpg','img/bisiness.jpg','img/darkblue.jpg'],
+        // 切替背景画像を指定
+        interval : 5000,
+        // 背景画像を切り替える間隔を指定 3000=3秒
+        loop     : true,
+        // 切り替えを繰り返すか指定 true=繰り返す false=繰り返さない
+        shuffle  : false,
+        // 背景画像の順番をシャッフルするか指定 true=する false=しない
+        effect   : "fade",
+        // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
+        duration : 2000,
+        // エフェクトの時間を指定します。
+        easing   : "swing"
+        // エフェクトのイージングをlinear,swingから指定
       });
     });
-  });
+
+    $(function(){
+      $('#top').click(function(){
+        var speed    = 1000;
+        var href     = $(this).attr("href");
+        var target   = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+      });
+    });
+
+
+    // fadeIn setting
+
+    $(function() {
+      $(window).scroll(function(){  // windowがスクロールされたら以下の処理実行
+        $('.fadeIn').each(function(){
+          // .each()で.fadeInクラスの付いた要素1つずつに順番に処理を行う
+          var position     = $(this).offset().top;
+          // .offset()でページの最上部から .fadein が付いた要素までの距離を取得 → 変数positionに代入
+          var scroll       = $(window).scrollTop();
+          // .scrollTop()で、スクロールした量を取得、変数scrollに代入
+          var windowHeight = $(window).height();
+          // .height()でウィンドウの高さを取得、変数windowHeightに代入
+          if (scroll > position - windowHeight){
+            // スクロール量が
+            //「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時
+            $(this).addClass('active');
+            // .fadeIn が付いた要素に active クラス が付く
+          }
+        });
+      });
+    });
 
   $(function(){
-    $('.bot').fadeIn(3000);
-    // $('.bot').fadeOut(4000);
-
+    $('.spot').fadeIn(3000);
   });
 
   }); // first function
-  </script>
-  <script type="text/javascript" src="js/main.js"></script>
-  </body>
+</script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
