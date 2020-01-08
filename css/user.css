@@ -366,6 +366,11 @@ footer p {
     line-height: 120px;
   }
 
+  .title a {
+    color: #222;
+    text-decoration: none;
+  }
+
   /*   new_member   */
 
   .registre {
@@ -611,8 +616,6 @@ footer p {
 
    /*   menu tab   */
 
-   /*   menu tab   */
-
   .login_2 {
     position: absolute;
     z-index: 9999;
@@ -687,6 +690,11 @@ footer p {
     width: 100%;
     height: 100px;
     line-height: 120px;
+  }
+
+  .title a {
+    color: #222;
+    text-decoration: none;
   }
 
   /*   new_member   */

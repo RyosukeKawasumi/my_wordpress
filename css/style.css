@@ -7,7 +7,7 @@ body {
 }
 
 .all {
-  overflow: auto;
+  overflow: hidden;
 }
 
 
