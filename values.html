@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Value</title>
-    <link rel="stylesheet" href="css/style.css" media="screen and (min-width: 769px)"> <!-- pc -->
-    <link rel="stylesheet" href="css/middle.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet -->
-    <link rel="stylesheet" href="css/small.css" media="screen and (max-width: 479px)"> <!-- mobile -->
+    <link rel="stylesheet" href="css/values.css" media="screen and (min-width: 769px)"> <!-- pc -->
+    <link rel="stylesheet" href="css/values.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet -->
+    <link rel="stylesheet" href="css/values.css" media="screen and (max-width: 479px)"> <!-- mobile -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!--fontawesome -->
   </head>
   <body>
@@ -49,8 +49,184 @@
         </nav>
       </div> <!-- /menu -->
     </div><!-- /value -->
+    <div class="values_backgroud">
+      <h1>アイキャッチ</h1>
+    </div>
 
-<main>
-</main>
+    <main>
+      <div class="description">
+        <p>説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。</p>
+      </div>
+
+      <div class="select_window">
+        <div class="block_1">
+          <p>Project</p>
+        </div>
+
+        <div class="block_2">
+          <div class="block_2_child">
+            <p class="child_1">Select</p>
+            <p>Select2</p>
+          </div>
+          <div class="block_2_child_second">
+            <p>Select3</p>
+          </div>
+        </div>
+
+        <div class="block_3">
+          <p>100</p>
+        </div>
+
+        <div class="block_4">
+          <div class="block_4_child">
+            <p>left</p>
+            <p class="block_4_center">photo</p>
+            <p>right</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </main>
+    <div id="top_btn" class="scroll_hide">
+      <p>TOP</p>
+    </div>
+
+    <!--  SNS  -->
+
+    <div id="sns" class="scroll_hide">
+      <a href="">
+        <div class="twitter">
+          <p><i class="fab fa-twitter-square"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fas fa-share"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fab fa-instagram"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fas fa-envelope"></i></p>
+        </div>
+      </a>
+    </div><!-- /#sns -->
+
+    <!-- footer -->
+
+    <div class="fadeIn">
+      <footer>
+        <p>copyrite 2019 Kawasumi.R.</p>
+      </footer>
+    </div><!-- /fadeIn -->
+
+    </div><!-- /all -->
+
+    <!--  script  -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+    <script>
+
+    $(function() {
+    // middle or small menu画面開閉設定
+    $('.navbar_toggle').on('click', function ()
+    {
+      $(this).toggleClass('open');
+      $('.menu').toggleClass('open');
+    });
+
+    // #top_btn scrollしたらtopへ戻る表示設定
+    var amount = 200; //スクロール量(px)の設定(200px)
+    $('.scroll_hide').hide(); //非表示
+
+    $(window).scroll(function()
+    { //windowをscrollしたら次の処理
+      var scrollPoint = $(this).scrollTop(); // 変数宣言
+      (scrollPoint > amount)?$('.scroll_hide').fadeIn():
+      (scrollPoint < amount)?$('.scroll_hide').fadeOut():
+      $('.scroll_hide').show();
+    });
+
+    $('#top_btn').click(function () {
+      $('body, html').animate({
+        scrollTop: 0
+      }, 300);
+      return false;
+    });
+
+
+
+    // slide show setting
+    $(function($) {
+
+      $('.background').bgSwitcher({
+        images: ['img/sample.jpg','img/clock.jpg','img/bisiness.jpg','img/darkblue.jpg'],
+        // 切替背景画像を指定
+        interval : 5000,
+        // 背景画像を切り替える間隔を指定 3000=3秒
+        loop     : true,
+        // 切り替えを繰り返すか指定 true=繰り返す false=繰り返さない
+        shuffle  : false,
+        // 背景画像の順番をシャッフルするか指定 true=する false=しない
+        effect   : "fade",
+        // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
+        duration : 2000,
+        // エフェクトの時間を指定します。
+        easing   : "swing"
+        // エフェクトのイージングをlinear,swingから指定
+      });
+    });
+
+    $(function(){
+      $('#top').click(function(){
+        var speed    = 1000;
+        var href     = $(this).attr("href");
+        var target   = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+      });
+    });
+
+
+    // fadeIn setting
+
+    $(function() {
+      $(window).scroll(function(){  // windowがスクロールされたら以下の処理実行
+        $('.fadeIn').each(function(){
+          // .each()で.fadeInクラスの付いた要素1つずつに順番に処理を行う
+          var position     = $(this).offset().top;
+          // .offset()でページの最上部から .fadein が付いた要素までの距離を取得 → 変数positionに代入
+          var scroll       = $(window).scrollTop();
+          // .scrollTop()で、スクロールした量を取得、変数scrollに代入
+          var windowHeight = $(window).height();
+          // .height()でウィンドウの高さを取得、変数windowHeightに代入
+          if (scroll > position - windowHeight){
+            // スクロール量が
+            //「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時
+            $(this).addClass('active');
+            // .fadeIn が付いた要素に active クラス が付く
+          }
+        });
+      });
+    });
+
+    $(function(){
+    $('.spot').fadeIn(3000);
+    });
+
+    }); // first function
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
