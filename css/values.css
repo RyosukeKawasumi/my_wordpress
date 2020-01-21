@@ -31,7 +31,7 @@ body {
     z-index: 8000;
     width: 100%;
     height: 80px;
-    background: #333;
+    background: #000515;
   }
 
 
@@ -92,19 +92,22 @@ body {
   .values_backgroud {
     position: relative;
     width: 100%;
-    height: 300px;
-    background: gray;
+    height: 600px;
+    background: url(../img/blue_fllower.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: .3;
     margin-top: 80px;
   }
 
-      .values_backgroud h1 {
+      /* .values_backgroud h1 {
         font-size: 50px;
         text-align: center;
         line-height: 300px;
         width: 50%;
         height: 100px;
         margin: 0 auto;
-      }
+      } */
 
   /*  .description   */
 
@@ -113,6 +116,7 @@ body {
     height: 400px;
     margin: 100px auto 100px auto;
     background: #555;
+    opacity: .2;
   }
 
 
@@ -121,7 +125,7 @@ body {
     position: relative;
     width: 83%;
     height: 940px;
-    margin: 0 auto;
+    margin: 200px auto 200px auto;
     background: #000515;
     opacity: .5;
   }
@@ -209,7 +213,342 @@ body {
       }
 
           .block_right div p {
-            font-size: 100px;
+            font-size: 7vw;
+            line-height: 130px;
+            letter-spacing: 10px;
+          }
+
+
+      /*  block_bottom  */
+
+
+      .block_bottoms {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+      }
+
+          .block_bottom {
+            display: flex;
+            justify-content: space-between;
+          }
+
+              .block_bottoms .center {
+                color: #fff;
+                background: url(../img/darkblue.jpg);
+                background-position: bottom;
+                background-size: cover;
+                opacity: .4;
+                width: 48vw;
+                height: 200px;
+                border-radius: 5px;
+              }
+
+                .block_bottoms .center p {
+                  font-size: 2vw;
+                  line-height: 200px;
+                  letter-spacing: 6px;
+                }
+
+              .block_bottoms .side {
+                color: #fff;
+                width: 15vw;
+                height: 200px;
+                background: #333;
+                opacity: .4;
+                border-radius: 5px;
+              }
+
+
+
+
+
+  /*   footer   */
+
+  footer {
+    background: #333;
+    width: 100%;
+    height: 150px;
+    opacity: .3;
+  }
+
+  footer p {
+    text-align: center;
+    line-height: 150px;
+  }
+
+}
+
+
+/*     middle     */
+
+
+
+@media screen and (max-width: 769px) and (min-width: 480px) {
+  body {
+    margin: 0;
+    font-family: 'Arial', 'sans-serif';
+    user-select: none;
+    background: #000515;
+    /* background: pink; */
+  }
+
+  .all {
+    overflow: hidden;
+  }
+
+
+  /*   nav   */
+
+  .value {
+    width: 100%;
+    height: 62px;
+    position: relative;
+    background: #000515;
+  }
+
+  .value h1 {
+    display: none;
+  }
+
+  /*   .menu部分   */
+
+  .menu {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition:ease .5s;
+    transition:ease .5s;
+    z-index: 1;
+    background: #333;
+    position: absolute;
+    top: 62px;
+    width: 100%;
+    opacity: .8;
+  }
+
+  .menu nav ul {
+    margin: 0;
+      padding: 0;
+    list-style: none;
+  }
+
+  .menu ul li {
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: .2s;
+    margin: 0 auto;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  .menu ul li:hover {
+    opacity: .5;
+  }
+
+  .menu nav ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /*  .menu navのopen時の動き  */
+
+  .menu.open {
+    -webkit-transform:translateX(0);
+    transform:translateX(0);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+   /*   menu tab   */
+
+  .login_2 {
+    position: absolute;
+    z-index: 9999;
+    top: 16px;
+    right: 20px;
+  }
+
+  .login_2 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+   /*   toggle   */
+
+  .navbar_toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+  }
+
+
+  .navbar_toggle_icon {
+    position: relative;
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #fff;
+    transition: ease .5s;
+  }
+
+  .navbar_toggle_icon:nth-child(2) {
+    margin: 8px 0;
+  }
+
+
+  /* menu tab OPEN時の動き  */
+
+  .navbar_toggle.open .navbar_toggle_icon:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .navbar_toggle.open .navbar_toggle_icon:nth-child(2) {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  .navbar_toggle.open .navbar_toggle_icon:nth-child(3) {
+    top: -10px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /*   values_background   */
+
+  .values_backgroud {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url(../img/blue_fllower.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: .3;
+  }
+
+      /* .values_backgroud h1 {
+        font-size: 50px;
+        text-align: center;
+        line-height: 300px;
+        width: 50%;
+        height: 100px;
+        margin: 0 auto;
+      } */
+
+  /*  .description   */
+
+  .description {
+    width: 80%;
+    height: 400px;
+    margin: 100px auto 100px auto;
+    background: #555;
+    opacity: .2;
+  }
+
+
+  /*   menu containers   */
+  .containers {
+    position: relative;
+    width: 83%;
+    height: 940px;
+    margin: 200px auto 200px auto;
+    background: #000515;
+    opacity: .5;
+  }
+
+      .containers p {
+        margin: 0;
+        text-align: center;
+        font-family: 'impact', 'Arial', 'sans-serif';
+      }
+
+          .containers a {
+            text-decoration: none;
+            color: #fff;
+          }
+
+
+      /*   block_top   */
+
+      .block_top div {
+        width: 100%;
+        height: 150px;
+        background: #333;
+        opacity: .4;
+        border-radius: 5px;
+      }
+
+          .block_top div p {
+            letter-spacing: 6px;
+            font-size: 80px;
+            line-height: 150px;
+          }
+
+      /*   block_left   */
+
+      .block_left {
+        position: absolute;
+        top: 180px;
+        left: 0;
+        width: 40vw;
+        height: 500px;
+      }
+
+      .block_left .box1 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+          .block_left .box1 a div {
+            width: 19vw;
+            height: 255px;
+            background: #333;
+            opacity: .4;
+            border-radius: 5px;
+          }
+
+              .block_left .box1 .box1_right {
+                background: url(../img/darkblue.jpg);
+                background-position: bottom;
+                background-size: cover;
+              }
+
+          .block_left .box2 div {
+            width: 100%;
+            height: 255px;
+            margin-top: 20px;
+            background: url(../img/darkblue.jpg);
+            background-position: bottom;
+            background-size: cover;
+            opacity: .4;
+            border-radius: 5px;
+          }
+
+      /*   block_right   */
+
+      .block_right div {
+        position: absolute;
+        top: 180px;
+        right: 0;
+        width: 40vw;
+        height: 530px;
+        background: #333;
+        border-radius: 5px;
+        opacity: .4;
+      }
+
+          .block_right div p {
+            font-size: 70px;
             line-height: 130px;
             letter-spacing: 10px;
           }
@@ -243,7 +582,7 @@ body {
 
                 .block_bottoms .center p {
                   font-size: 40px;
-                  line-height: 200px;
+                  line-height: 100px;
                   letter-spacing: 6px;
                 }
 
@@ -257,15 +596,77 @@ body {
               }
 
 
+/*   top_btn   */
 
+  #top_btn {
+    position: fixed;
+    z-index: 4;
+    bottom: 70px;
+    right: 10px;
+    width: 100px;
+    height: 70px;
+    background: #333;
+    opacity: .5;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+    transition: .3s;
+  }
+
+  #top_btn:hover {
+    background: #333;
+    border: 1px solid #fff;
+  }
+
+  /* sns */
+
+  #sns {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 60px;
+  }
+
+  #sns a {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    transition: .3s;
+  }
+
+  #sns a:hover {
+    opacity: .5;
+  }
+
+  .twitter {
+    margin: 0;
+    border: 1px solid #fff;
+    width: 25vw;
+    height: 60px;
+    background: #000515;
+  }
+
+  .twitter p {
+    font-size: 28px;
+    color: #fff;
+    margin-top: 15px;
+  }
 
 
   /*   footer   */
 
   footer {
-    background: #777;
+    background: #333;
     width: 100%;
     height: 150px;
+    opacity: .3;
   }
 
   footer p {
@@ -276,15 +677,16 @@ body {
 }
 
 
-/*     middle     */
 
 
+/*         small       */
 
-@media screen and (max-width: 769px) and (min-width: 480px) {
+@media screen and (max-width: 479px){
   body {
     margin: 0;
     font-family: 'Arial', 'sans-serif';
     user-select: none;
+    background: #000515;
     /* background: pink; */
   }
 
@@ -299,7 +701,7 @@ body {
     width: 100%;
     height: 62px;
     position: relative;
-    background: #666;
+    background: #000515;
   }
 
   .value h1 {
@@ -416,257 +818,205 @@ body {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  /*   background   */
 
-  .background {
+  /*   values_background   */
+
+  .values_backgroud {
     position: relative;
     width: 100%;
-    height: 1000px;
-    /* background-color: #333; */
+    height: 600px;
+    background: url(../img/blue_fllower.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: .3;
   }
 
-  /*   title   */
+      /* .values_backgroud h1 {
+        font-size: 50px;
+        text-align: center;
+        line-height: 300px;
+        width: 50%;
+        height: 100px;
+        margin: 0 auto;
+      } */
 
-  .title h1 {
-    /* float: left; */
-    font-size: 50px;
-    text-align: center;
-    padding-top: 100px;
-    margin: 0;
-    /* background: skyblue; */
-    width: 100%;
-    height: 100px;
-    line-height: 120px;
+  /*  .description   */
+
+  .description {
+    width: 80%;
+    height: 400px;
+    margin: 100px auto 100px auto;
+    background: #555;
+    opacity: .2;
   }
 
-  .title a {
-    color: #222;
-    text-decoration: none;
-  }
 
-  /* sns */
-
-  #sns {
-    position: fixed;
-    z-index: 3;
-    bottom: 0;
-    display: flex;
-    width: 100%;
-    height: 60px;
-  }
-
-  #sns a {
-    text-decoration: none;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    transition: .3s;
-  }
-
-  #sns a:hover {
+  /*   menu containers   */
+  .containers {
+    position: relative;
+    width: 83%;
+    height: 940px;
+    margin: 200px auto 200px auto;
+    background: #000515;
     opacity: .5;
   }
 
-  .twitter {
-    margin: 0;
-    background: #fff;
-    border: 1px solid #fff;
-    width: 25vw;
-    height: 60px;
+      .containers p {
+        margin: 0;
+        text-align: center;
+        font-family: 'impact', 'Arial', 'sans-serif';
+      }
+
+          .containers a {
+            text-decoration: none;
+            color: #fff;
+          }
+
+
+      /*   block_top   */
+
+      .block_top div {
+        width: 100%;
+        height: 150px;
+        background: #333;
+        opacity: .4;
+        border-radius: 5px;
+      }
+
+          .block_top div p {
+            letter-spacing: 6px;
+            font-size: 50px;
+            line-height: 150px;
+          }
+
+      /*   block_left   */
+
+      .block_left {
+        position: absolute;
+        top: 180px;
+        left: 0;
+        width: 40vw;
+        height: 500px;
+      }
+
+      .block_left .box1 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+          .block_left .box1 a div {
+            width: 19vw;
+            height: 255px;
+            background: #333;
+            opacity: .4;
+            border-radius: 5px;
+          }
+
+              .block_left .box1 .box1_right {
+                background: url(../img/darkblue.jpg);
+                background-position: bottom;
+                background-size: cover;
+              }
+
+          .block_left .box2 div {
+            width: 100%;
+            height: 255px;
+            margin-top: 20px;
+            background: url(../img/darkblue.jpg);
+            background-position: bottom;
+            background-size: cover;
+            opacity: .4;
+            border-radius: 5px;
+          }
+
+      /*   block_right   */
+
+      .block_right div {
+        position: absolute;
+        top: 180px;
+        right: 0;
+        width: 40vw;
+        height: 530px;
+        background: #333;
+        border-radius: 5px;
+        opacity: .4;
+      }
+
+          .block_right div p {
+            font-size: 50px;
+            line-height: 105px;
+            letter-spacing: 10px;
+          }
+
+
+      /*  block_bottom  */
+
+
+      .block_bottoms {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+      }
+
+          .block_bottom {
+            display: flex;
+            justify-content: space-between;
+          }
+
+              .block_bottoms .center {
+                color: #fff;
+                background: url(../img/darkblue.jpg);
+                background-position: bottom;
+                background-size: cover;
+                opacity: .4;
+                width: 48vw;
+                height: 200px;
+                border-radius: 5px;
+              }
+
+                .block_bottoms .center p {
+                  font-size: 30px;
+                  line-height: 70px;
+                  letter-spacing: 6px;
+                }
+
+              .block_bottoms .side {
+                color: #fff;
+                width: 15vw;
+                height: 200px;
+                background: #333;
+                opacity: .4;
+                border-radius: 5px;
+              }
+
+
+/*   top_btn   */
+
+  #top_btn {
+    position: fixed;
+    z-index: 4;
+    bottom: 70px;
+    right: 10px;
+    width: 100px;
+    height: 70px;
     background: #333;
-  }
-
-  .twitter p {
-    font-size: 28px;
-    color: #fff;
-    margin-top: 15px;
-  }
-
-
-  /*   footer   */
-
-  footer {
-    background: #777;
-    width: 100%;
-    height: 150px;
-  }
-
-  footer p {
-    text-align: center;
-    line-height: 150px;
-  }
-
-
-  }
-
-
-
-
-/*         small       */
-
-@media screen and (max-width: 479px){
-  body {
-    margin: 0;
-    font-family: 'Arial', 'sans-serif';
-    user-select: none;
-    /* background: skyblue; */
-  }
-
-  .all {
-    overflow: hidden;
-  }
-
-
-  /*   nav   */
-
-
-  .value {
-    width: 100%;
-    height: 62px;
-    position: relative;
-    background: #666;
-  }
-
-  .value h1 {
-    display: none;
-  }
-
-  /*   .menu部分   */
-
-  .menu {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    -webkit-transition:ease .5s;
-    transition:ease .5s;
-    z-index: 1;
-    background: #333;
-    position: absolute;
-    top: 62px;
-    width: 100%;
-    opacity: .8;
-  }
-
-  .menu nav ul {
-    margin: 0;
-      padding: 0;
-    list-style: none;
-  }
-
-  .menu ul li {
+    opacity: .5;
     font-size: 20px;
-    border-bottom: 1px solid #ddd;
-    height: 50px;
+    letter-spacing: 2px;
+    border: 1px solid #333;
+    border-radius: 15px;
     text-align: center;
-    line-height: 50px;
-    transition: .2s;
-    margin: 0 auto;
-  }
-
-  .menu ul li:last-child {
-    border-bottom: none;
-  }
-
-  .menu ul li:hover {
-    opacity: .5;
-  }
-
-  .menu nav ul a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  /*  .menu navのopen時の動き  */
-
-  .menu.open {
-    -webkit-transform:translateX(0);
-    transform:translateX(0);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-   /*   menu tab   */
-
-  .login_2 {
-    position: absolute;
-    z-index: 9999;
-    top: 16px;
-    right: 20px;
-  }
-
-  .login_2 a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-  }
-
-   /*   toggle   */
-
-  .navbar_toggle {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-  }
-
-  .navbar_toggle_icon {
-    position: relative;
-    display: block;
-    height: 2px;
-    width: 30px;
-    background: #fff;
-    transition: ease .5s;
-  }
-
-  .navbar_toggle_icon:nth-child(2) {
-    margin: 8px 0;
-  }
-
-
-  /* menu tab OPEN時の動き  */
-
-  .navbar_toggle.open .navbar_toggle_icon:nth-child(1) {
-    top: 10px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  .navbar_toggle.open .navbar_toggle_icon:nth-child(2) {
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  .navbar_toggle.open .navbar_toggle_icon:nth-child(3) {
-    top: -10px;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  /*   background   */
-
-  .background {
-    position: relative;
-    width: 100%;
-    height: 1000px;
-    /* background-color: #333; */
-  }
-
-  /*   title   */
-
-  .title h1 {
-    /* float: left; */
-    font-size: 40px;
-    text-align: center;
-    padding-top: 100px;
+    line-height: 30px;
     margin: 0;
-    /* background: skyblue; */
-    width: 100%;
-    height: 100px;
-    line-height: 120px;
+    transition: .3s;
   }
 
-  .title a {
-    color: #222;
-    text-decoration: none;
+  #top_btn:hover {
+    background: #333;
+    border: 1px solid #fff;
   }
-
 
   /* sns */
 
@@ -693,11 +1043,10 @@ body {
 
   .twitter {
     margin: 0;
-    background: #fff;
     border: 1px solid #fff;
     width: 25vw;
     height: 60px;
-    background: #333;
+    background: #000515;
   }
 
   .twitter p {
@@ -710,9 +1059,10 @@ body {
   /*   footer   */
 
   footer {
-    background: #777;
+    background: #333;
     width: 100%;
     height: 150px;
+    opacity: .3;
   }
 
   footer p {
@@ -720,5 +1070,4 @@ body {
     line-height: 150px;
   }
 
-
-  }
+}

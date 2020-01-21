@@ -5,35 +5,227 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Value</title>
     <link rel="stylesheet" href="css/plan.css" media="screen and (min-width: 769px)"> <!-- pc -->
-    <link rel="stylesheet" href="css/plan.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet-->
+    <link rel="stylesheet" href="css/plan.css" media="screen and (min-width: 480px) and (max-width: 768px)"> <!-- tablet -->
     <link rel="stylesheet" href="css/plan.css" media="screen and (max-width: 479px)"> <!-- mobile -->
-
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!--fontawesome -->
   </head>
   <body>
-    <div class="all">
-    <div class="background">
-      <div class="value">
-        <div class="title">
-          <h1>Values</h1>
-        </div> <!-- /title -->
-        <div class="menu">
-          <nav>
-            <ul>
-              <li><a href="">TOP</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Values</a></li>
-              <li><a href="">plan</a></li>
-              <li><a href="">month</a></li>
-              <li><a href="">Day</a></li>
-            </ul>
-          </nav>
-        </div> <!-- /menu -->
-        <div id="tab"><p>menu</p></div>
-      </div><!-- /value -->
+<!-- MENUtab -->
+    <div class="value">
+      <div class="title">
+        <a href="#">
+          <h1>Value</h1>
+        </a>
+      </div> <!-- /title -->
+      <div class="login">
+        <div class="login_2">
+          <a href="login.html">
+            <span>
+              <i class="fas fa-lock"></i>
+            </span>
+          </a>
+        </div><!-- login_2 -->
+        <div class="navbar_toggle">
+          <span class="navbar_toggle_icon"></span>
+          <span class="navbar_toggle_icon"></span>
+          <span class="navbar_toggle_icon"></span>
+        </div><!-- /toggle -->
+      </div><!-- /login -->
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Values</a></li>
+            <li><a href="">plan</a></li>
+            <li><a href="">month</a></li>
+            <li><a href="">Day</a></li>
+            <li class="login_1">
+              <a href="login.html">
+                <span><i class="fas fa-lock"></i></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div> <!-- /menu -->
+    </div><!-- /value -->
+    <div class="values_backgroud">
 
+    </div>
+
+    <main>
+      <div class="description">
+        <p>説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。説明が入る予定。</p>
+      </div>
+
+      <div class="plans">
+
+        <div class="years">
+          <div class="plans_left">
+            <img src="img/one.jpg">
+          </div>
+          <div class="plans_right"></div>
+        </div>
+
+        <div class="years">
+          <div class="plans_right">
+            <img src="img/fifty.jpg">
+          </div>
+          <div class="plans_left">
+          </div>
+        </div>
+
+        <div class="years">
+          <div class="plans_left">
+            <img src="img/one.jpg">
+          </div>
+          <div class="plans_right"></div>
+        </div>
+
+        <div class="years">
+          <div class="plans_right">
+            <img src="img/fifty.jpg">
+          </div>
+          <div class="plans_left">
+          </div>
+        </div>
+
+        <div class="years">
+          <div class="plans_left">
+            <img src="img/one.jpg">
+          </div>
+          <div class="plans_right"></div>
+        </div>
+
+        <div class="years">
+          <div class="plans_right">
+            <img src="img/fifty.jpg">
+          </div>
+          <div class="plans_left">
+          </div>
+        </div>
+
+        <div class="years">
+          <div class="plans_left">
+            <img src="img/one.jpg">
+          </div>
+          <div class="plans_right"></div>
+        </div>
+
+      </div>
+
+    </main>
+    <div id="top_btn" class="scroll_hide">
+      <p>TOP</p>
+    </div>
+
+    <!--  SNS  -->
+
+    <div id="sns" class="scroll_hide">
+      <a href="">
+        <div class="twitter">
+          <p><i class="fab fa-twitter-square"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fas fa-share"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fab fa-instagram"></i></p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="twitter">
+          <p><i class="fas fa-envelope"></i></p>
+        </div>
+      </a>
+    </div><!-- /#sns -->
+
+    <!-- footer -->
+
+    <div class="fadeIn">
       <footer>
         <p>copyrite 2019 Kawasumi.R.</p>
       </footer>
-    </div>
-    </body>
-  </html>
+    </div><!-- /fadeIn -->
+
+    </div><!-- /all -->
+
+    <!--  script  -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+    <script>
+
+    $(function() {
+    // middle or small menu画面開閉設定
+    $('.navbar_toggle').on('click', function ()
+    {
+      $(this).toggleClass('open');
+      $('.menu').toggleClass('open');
+    });
+
+    // #top_btn scrollしたらtopへ戻る表示設定
+    var amount = 200; //スクロール量(px)の設定(200px)
+    $('.scroll_hide').hide(); //非表示
+
+    $(window).scroll(function()
+    { //windowをscrollしたら次の処理
+      var scrollPoint = $(this).scrollTop(); // 変数宣言
+      (scrollPoint > amount)?$('.scroll_hide').fadeIn():
+      (scrollPoint < amount)?$('.scroll_hide').fadeOut():
+      $('.scroll_hide').show();
+    });
+
+    $('#top_btn').click(function () {
+      $('body, html').animate({
+        scrollTop: 0
+      }, 300);
+      return false;
+    });
+
+
+
+    // slide show setting
+    $(function($) {
+
+      $('.background').bgSwitcher({
+        images: ['img/sample.jpg','img/clock.jpg','img/bisiness.jpg','img/darkblue.jpg'],
+        // 切替背景画像を指定
+        interval : 5000,
+        // 背景画像を切り替える間隔を指定 3000=3秒
+        loop     : true,
+        // 切り替えを繰り返すか指定 true=繰り返す false=繰り返さない
+        shuffle  : false,
+        // 背景画像の順番をシャッフルするか指定 true=する false=しない
+        effect   : "fade",
+        // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
+        duration : 2000,
+        // エフェクトの時間を指定します。
+        easing   : "swing"
+        // エフェクトのイージングをlinear,swingから指定
+      });
+    });
+
+    $(function(){
+      $('#top').click(function(){
+        var speed    = 1000;
+        var href     = $(this).attr("href");
+        var target   = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+      });
+    });
+
+    }); // first function
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

@@ -36,8 +36,8 @@
           <ul>
             <li><a href="index.html">TOP</a></li>
             <li><a href="">About</a></li>
-            <li><a href="">Values</a></li>
-            <li><a href="">plan</a></li>
+            <li><a href="values.html">Values</a></li>
+            <li><a href="plan.html">plan</a></li>
             <li><a href="">month</a></li>
             <li><a href="">Day</a></li>
             <li class="login_1">
@@ -50,7 +50,7 @@
       </div> <!-- /menu -->
     </div><!-- /value -->
     <div class="values_backgroud">
-      <h1>アイキャッチ</h1>
+
     </div>
 
     <main>
@@ -230,33 +230,6 @@
         $("html, body").animate({scrollTop:position}, speed, "swing");
         return false;
       });
-    });
-
-
-    // fadeIn setting
-
-    $(function() {
-      $(window).scroll(function(){  // windowがスクロールされたら以下の処理実行
-        $('.fadeIn').each(function(){
-          // .each()で.fadeInクラスの付いた要素1つずつに順番に処理を行う
-          var position     = $(this).offset().top;
-          // .offset()でページの最上部から .fadein が付いた要素までの距離を取得 → 変数positionに代入
-          var scroll       = $(window).scrollTop();
-          // .scrollTop()で、スクロールした量を取得、変数scrollに代入
-          var windowHeight = $(window).height();
-          // .height()でウィンドウの高さを取得、変数windowHeightに代入
-          if (scroll > position - windowHeight){
-            // スクロール量が
-            //「ページ最上部から要素までの距離」-「ウィンドウの高さ」を超えた時
-            $(this).addClass('active');
-            // .fadeIn が付いた要素に active クラス が付く
-          }
-        });
-      });
-    });
-
-    $(function(){
-    $('.spot').fadeIn(3000);
     });
 
     }); // first function
