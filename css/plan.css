@@ -120,7 +120,7 @@ body {
 
 .plans {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 2000px;
   margin: 100px auto 100px auto;
   background: #000515;
@@ -182,7 +182,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40vw;
+  width: 50vw;
   height: 150px;
 }
 
@@ -191,7 +191,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 40vw;
+  width: 50vw;
   height: 150px;
 }
 
